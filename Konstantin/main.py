@@ -68,6 +68,7 @@ def is_unicode (u_letter):
 in_letter = str(input ("Введите букву: "))
 # IMHO лучше сразу проверять ввод, не передавая
 # в функцию не то, что там ожидают...
+
 if len(in_letter) > 1:
     print ("Одна буква!")
     exit(0)
@@ -79,3 +80,10 @@ else:
     print (ord(in_letter))
     print(in_letter)
     is_unicode(in_letter)
+
+'''
+assert len(in_letter) > 1, 'Только одна буква'
+assert not in_letter.isalpha(), 'Ну букву же!'
+in_letter = in_letter.upper()
+is_unicode(in_letter)
+'''
