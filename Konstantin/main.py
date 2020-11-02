@@ -77,8 +77,8 @@ elif not in_letter.isalpha():
     exit(0)
 else:
     in_letter = in_letter.upper()
-    print (ord(in_letter))
-    print(in_letter)
+#    print (ord(in_letter))
+#    print(in_letter)
     is_unicode(in_letter)
 
 '''
