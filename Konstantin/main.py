@@ -46,6 +46,9 @@ def romb(letter, all_letters):
 #==========================================================
 
 def is_unicode (u_letter):
+    assert len(u_letter) < 2, 'Только одна буква'
+    assert u_letter.isalpha(), 'Ну букву же!'
+    u_letter = u_letter.upper()
     un_array = ''
     in_let = ord(u_letter)
 
@@ -66,24 +69,18 @@ def is_unicode (u_letter):
 
 
 in_letter = str(input ("Введите букву: "))
+is_unicode(in_letter)
+
 # IMHO лучше сразу проверять ввод, не передавая
 # в функцию не то, что там ожидают...
-
-if len(in_letter) > 1:
-    print ("Одна буква!")
-    exit(0)
-elif not in_letter.isalpha():
-    print ("Ну букву же!")
-    exit(0)
-else:
-    in_letter = in_letter.upper()
-#    print (ord(in_letter))
-#    print(in_letter)
-    is_unicode(in_letter)
-
-'''
-assert len(in_letter) > 1, 'Только одна буква'
-assert not in_letter.isalpha(), 'Ну букву же!'
-in_letter = in_letter.upper()
-is_unicode(in_letter)
-'''
+# if len(in_letter) > 1:
+#     print ("Одна буква!")
+#     exit(0)
+# elif not in_letter.isalpha():
+#     print ("Ну букву же!")
+#     exit(0)
+# else:
+#     in_letter = in_letter.upper()
+# #    print (ord(in_letter))
+# #    print(in_letter)
+#     is_unicode(in_letter)
